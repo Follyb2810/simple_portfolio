@@ -1,5 +1,4 @@
 // MainBar.js
-import React from 'react';
 
 const MainBar = () => {
   return (

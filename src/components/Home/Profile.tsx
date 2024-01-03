@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Hero } from '../../assets/image';
 import { SocialAccount } from '../../constant';
 
