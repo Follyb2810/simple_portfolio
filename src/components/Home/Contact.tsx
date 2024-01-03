@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Template from '../Shared/Template'
 import { socialAccounts } from '../../constant'
 

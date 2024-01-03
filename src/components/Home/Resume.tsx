@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Template from '../Shared/Template'
 import Skill from '../Shared/Skill'
 import { SkillData } from '../../constant'
