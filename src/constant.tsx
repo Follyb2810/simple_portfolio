@@ -1,42 +1,16 @@
 import { BsWhatsapp , BsHouseDoor } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
 import { MdOutlinePerson2 ,MdOutlineContactMail} from "react-icons/md";
-import { ReactNode } from "react";
 import { CiFileOn,CiServer } from "react-icons/ci";
+import { AiOutlineCheckCircle} from "react-icons/ai";
 import { IoBagOutline } from "react-icons/io5";
 import { Hero } from "./assets/image";
 import { FaWhatsapp, FaEnvelope, FaFacebook, FaTwitter, FaInstagram, FaPhone } from 'react-icons/fa';
+import { AboutDataProps, Client, ConsultantService, ServicesProps, SkilDataType, SocialAccountItem, SocialAccountProps, workDoneProps } from "./type";
 
 //! ReactElement<typeof BsWhatsapp | typeof FaLinkedin>; 
 
-interface SocialAccountItem {
-    name: string;
-    // icon: ReactElement<typeof BsWhatsapp | typeof FaLinkedin>;
-    icon: ReactNode;
-    path: string;
-  }
 
-  type AboutDataProps = {
-    title?:string,
-    content?:string,
-    tag?:string,
-    Img?:string
-  }
-  export interface SkilDataType {
-    id:number,
-    name:string,
-    level:string
-  }
-  export interface workDoneProps {
-    id:number,
-    title:string,
-    description:string,
-    technologies?:string[],
-    year?:number,
-  }
-  export interface ServicesProps extends workDoneProps {
-    icon:string
-  }
   
   export const SocialAccount: SocialAccountItem[] = [
     {
@@ -55,7 +29,7 @@ interface SocialAccountItem {
     {
       name: 'Home',
       icon: <BsHouseDoor size={24} />,
-      path: '#hero'
+      path: '/'
     },
     {
       name: 'About',
@@ -76,6 +50,11 @@ interface SocialAccountItem {
       name: 'Service',
       icon: <CiServer size={24} />,
       path: '#service'
+    },
+    {
+      name: 'Booking',
+      icon: <AiOutlineCheckCircle size={24} />,
+      path: '/booking'
     },
     {
       name: 'Contact',
@@ -169,14 +148,6 @@ interface SocialAccountItem {
     },
     // Add more services as needed
   ];
-
-  export interface SocialAccountProps {
-    id:number,
-    platform:string,
-    link:string,
-    icon:ReactNode
-  }
-
 export const socialAccounts :SocialAccountProps[]= [
   {
     id: 1,
@@ -219,6 +190,68 @@ export const socialAccounts :SocialAccountProps[]= [
     platform: 'Phone',
     link: 'tel:+1234567890',
     icon: <FaPhone />,
+  },
+];
+
+export const consultantsData: ConsultantService[] = [
+  
+      { id: 1, title: 'Service A', description: 'Description for Service A' },
+      { id: 2, title: 'Service B', description: 'Description for Service B' },
+      { id: 2, title: 'Service B', description: 'Description for Service B' },
+      { id: 2, title: 'Service B', description: 'Description for Service B' },
+      { id: 2, title: 'Service B', description: 'Description for Service B' },
+      { id: 2, title: 'Service B', description: 'Description for Service B' },
+      { id: 2, title: 'Service B', description: 'Description for Service B' },
+];
+
+export const clientsData: Client[] = [
+  {
+    id: 1,
+    name: 'Client A',
+    image: Hero,
+    details: 'Details about Client A.',
+  },
+  {
+    id: 2,
+    name: 'Client B',
+    image: Hero,
+    details: 'Details about Client B.',
+  },
+  {
+    id: 1,
+    name: 'Client A',
+    image: Hero,
+    details: 'Details about Client A.',
+  },
+  {
+    id: 2,
+    name: 'Client B',
+    image: Hero,
+    details: 'Details about Client B.',
+  },
+  {
+    id: 1,
+    name: 'Client A',
+    image: Hero,
+    details: 'Details about Client A.',
+  },
+  {
+    id: 2,
+    name: 'Client B',
+    image: Hero,
+    details: 'Details about Client B.',
+  },
+  {
+    id: 1,
+    name: 'Client A',
+    image: Hero,
+    details: 'Details about Client A.',
+  },
+  {
+    id: 2,
+    name: 'Client B',
+    image: Hero,
+    details: 'Details about Client B.',
   },
 ];
 
